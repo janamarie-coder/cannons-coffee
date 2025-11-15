@@ -69,6 +69,7 @@ header {
  display: flex;
  flex-flow: row wrap;
  justify-content: space-between;
+ align-items: center;
  padding: 1rem;
  padding-bottom: 3rem;
 }
@@ -90,6 +91,7 @@ nav ul {
   gap: 1rem;
   flex-flow: row wrap;
   justify-content: space-between;
+  text-align: center;
 }
 
 nav a {
@@ -124,6 +126,7 @@ nav a {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
+  padding: 1rem;
 }
 
 .container1 img {
@@ -142,15 +145,18 @@ nav a {
   display: grid;
   grid-template-columns: 1fr;
   background-color: var(--tertiary-blue);
-  padding: 2rem;
-  grid-column: auto;
+  text-align: left;
+}
+
+.container2 img {
+border-radius: var(--radius);
 }
 
 .latte, 
 .coffee,
 .hot,
 .iced {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 footer {
@@ -160,29 +166,26 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
   header {
-    flex-direction: column;
+    justify-content: center;
+  
   }
-  .logo {
-    align-items: center;
-  }
-  .nav ul {
-justify-content: center;
-  }
-  nav {
-    align-items: center;
+  nav ul {
     justify-content: center;
   }
-  }
+}
   
 
 @media (min-width: 650px) {
+  .container1 {
+    padding: 0;
+    padding-left: 1rem;
+  }
   .container2 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 4rem;
-    text-align: left;
   } 
   .latte {
     grid-column: 1;
@@ -191,15 +194,30 @@ justify-content: center;
 
 @media (min-width: 1000px) {
   body {
-    padding: 4rem;
+    padding: 2rem;
+  } 
+  .container1 {
+    padding: 0;
   }
   .container2 {
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
     padding: 4rem;
-    text-align: left;
+  }
+  .container2 h2 {
+white-space: nowrap;
   }
   .latte {
     grid-column: 1;
   }
+  
 }
+
+
+
+
+
+
+
+
+
