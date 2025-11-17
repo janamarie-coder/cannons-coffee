@@ -60,9 +60,8 @@ body {
 main {
   background-color: var(--primary-white);
   text-align: center;
-  border-bottom: 5px solid var(--primary-yellow);
-  border-top: 5px solid var(--primary-yellow);
 }
+
 header {
  color: var(--primary-white);
  text-transform: uppercase;
@@ -127,6 +126,7 @@ nav a {
   gap: 1rem;
   align-items: center;
   padding: 1rem;
+  border-top: 5px solid var(--primary-yellow);
 }
 
 .container1 img {
@@ -146,6 +146,7 @@ nav a {
   grid-template-columns: 1fr;
   background-color: var(--tertiary-blue);
   text-align: left;
+  border-bottom: 5px solid var(--primary-yellow);
 }
 
 .container2 img {
@@ -166,7 +167,7 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 990px) {
   header {
     justify-content: center;
   
@@ -193,11 +194,14 @@ footer {
 }
 
 @media (min-width: 1000px) {
-  body {
-    padding: 2rem;
+  main {
+    background-color: var(--primary-blue);
+    padding-left: 2rem;
+     padding-right: 2rem;
   } 
   .container1 {
     padding: 0;
+    background-color: var(--primary-white);
   }
   .container2 {
     grid-template-columns: repeat(4,1fr);
