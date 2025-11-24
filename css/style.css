@@ -120,7 +120,8 @@ nav a {
   text-transform: uppercase;
 }
 
-.container1 {
+.container1,
+.container3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -131,6 +132,10 @@ nav a {
 
 .container1 img {
   grid-column: 1;
+}
+
+.container3 {
+  border-bottom: 5px solid var(--primary-yellow); 
 }
 
 .text1,
@@ -179,7 +184,8 @@ footer {
   
 
 @media (min-width: 650px) {
-  .container1 {
+  .container1,
+  .container3 {
     padding: 0;
     padding-left: 1rem;
   }
@@ -199,7 +205,8 @@ footer {
     padding-left: 2rem;
      padding-right: 2rem;
   } 
-  .container1 {
+  .container1,
+  .container3 {
     padding: 0;
     background-color: var(--primary-white);
   }
