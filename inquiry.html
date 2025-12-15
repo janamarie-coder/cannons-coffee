@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+    <div class="logo">
+        <img src="images/cannons-coffee-logo.webp" alt="Cannons Coffee, Beans of Joy! Est. 2014" />
+        <h1>Cannons Coffee</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="latte.html">Coffee</a></li>
+            <li><a href="https://newyorkcafe.hu/en/cafe-about-us/" target="_blank" alt="cafe-about-us">About</a></li>
+            <li><a href="mailto:janaharms16@gmail.com" alt="contact">Contact</a></li>
+            <li><a href="inquiry.html">Inquiry</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <main>
+    <div class="form-container">
+        <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="The name for your Order" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email" id="email" placeholder="your E-mail address" required>
+
+            <label for="number">Phone number:</label>
+            <input type="tel" name="phonenumber" id="phonenumber" placeholder="your phonenumber" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+
+            <label for="flavors">Choose your favorite flavor</label>
+            <select name="flavors" id="flavors">
+                <option value="pistacio">pistacio latte</option>
+                <option value="hazelnut latte">hazelnut latte</option>
+                <option value="peacan latte">peacan latte</option>
+</select>
+                <input type="radio" name="reason" id="coffee" required> 
+                <label for="coffee">Coffee Order</label>
+                <input type="radio" name="reason" id="employment" required>
+                <label for="employment">I would like to work here</label>
+
+<button type="submit">submit</button>
+          
+        </form>
+    </div>
+
+<p id="thank-you-message"></p>
+    </main>
+    <footer>
+        <img src="images/logo-footer.png" alt="Cannons Coffee, Beans of Joy! Est. 2014">
+        <p>© 2024 Cannons Coffee. All Rights Reserved.
+        </p>
+    </footer>
+    <script src="js/custom-inquiry.js"></script>
+</body>
+
+</html>
