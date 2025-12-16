@@ -1,47 +1,34 @@
-const form = document.querySelector("form");
+console.log("hello world");
+
+const form = document.querySelector("#form");
+const output = document.querySelector("#thank-you-message");
 
 form.addEventListener("submit", function (event) {
-event.preventDefault();
+  event.preventDefault();
 
-const name = document.querySelector("#name").value;
-const email = document.querySelector("#email").value;
-const phone = document.querySelector("#phonenumber").value;
-const comment = document.querySelector("#comment").value;
-const flavor = document.querySelector("#flavors").value;
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const phone = document.querySelector("#phonenumber").value;
+  const comment = document.querySelector("#comment").value;
+  const flavor = document.querySelector("#flavors").value;
 
-const reasonInput = document.querySelector("input[name='reason']:checked");
+  const reasonValue = document.querySelector("input[name='reason']:checked")?.value;
 
-let reasonText = "";
-    if (reasonId === "coffee") {
-        reasonText = "buying coffee";
-    } else if (reasonId === "employment") {
-        reasonText = "seeking employment";
-    } else {
-        reasonText = "contacting us";
-    }const reasonId = reasonInput ? reasonInput.id : "";
+  let reasonText = "contacting us";
+  if (reasonValue === "coffee") reasonText = "buying coffee";
+  if (reasonValue === "employment") reasonText = "seeking employment";
 
-console.log({
-        name: name,
-        email: email,
-        phone: phone,
-        comment: comment,
-        flavor: flavor,
-        reason: reason
-     });
+  console.log({
+    name,
+    email,
+    phone,
+    comment,
+    flavor,
+    reason: reasonValue
+  });
 
-const resultText = `
-Thank you ${name}! We appreciate your interest in ${reason}. 
-Your favorite coffee flavor is ${flavor}and your comments are ${comments}. 
-We will soon contact you at ${email} or  ${number}. `;
+  const resultText = `Thank you ${name}! We appreciate your interest in ${reasonText}. Your favorite coffee flavor is ${flavor} and your comments are: ${comment}. We will contact you at ${email} or ${phone}.`;
 
-form.style.display = "none";
-
-let output = document.querySelector("#thank-you-message");
-if (!output) {
-        output = document.createElement("p");
-        output.id = "thank-you-message";
-        document.body.appendChild(output);
-    }
-
- output.textContent = resultText;
+  output.textContent = resultText;
+  form.style.display = "none";
 });
